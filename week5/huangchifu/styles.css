@@ -1,0 +1,1023 @@
+/* 全局变量定义 */
+:root {
+    /* 浅色模式颜色 */
+    --bg-color: #f8f9fa;
+    --text-color: #2c3e50;
+    --heading-color: #2c3e50;
+    --secondary-text: #7f8c8d;
+    --accent-color: #3498db;
+    --accent-hover: #2980b9;
+    --card-bg: #ffffff;
+    --border-color: #ecf0f1;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --header-bg: #ffffff;
+    --nav-text: #2c3e50;
+    --nav-hover: #3498db;
+    --progress-bg: #ecf0f1;
+    --progress-fill: linear-gradient(90deg, #3498db, #2980b9);
+    --social-bg: #ffffff;
+    --social-hover: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --social-text: #34495e;
+    --social-hover-text: #ffffff;
+    --info-bg: #ffffff;
+    --info-icon-bg: #ecf0f1;
+    --form-input-bg: #ffffff;
+    --form-input-border: #ecf0f1;
+    --form-input-focus: #3498db;
+    --form-success-bg: #eafaf1;
+    --form-success-color: #27ae60;
+    --form-error-bg: #fdedec;
+    --form-error-color: #e74c3c;
+    --map-placeholder-bg: #f8f9fa;
+    --timeline-bg: #ffffff;
+    --achievement-bg: #ffffff;
+    --project-card-bg: #ffffff;
+    --project-text: #666666;
+    --transition-speed: 0.3s;
+}
+
+/* 深色模式颜色 */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --secondary-text: #b0b0b0;
+    --accent-color: #64b5f6;
+    --accent-hover: #90caf9;
+    --card-bg: #1e1e1e;
+    --border-color: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --header-bg: #1a1a1a;
+    --nav-text: #e0e0e0;
+    --nav-hover: #64b5f6;
+    --progress-bg: #333333;
+    --progress-fill: linear-gradient(90deg, #64b5f6, #42a5f5);
+    --social-bg: #1e1e1e;
+    --social-hover: linear-gradient(135deg, #9575cd 0%, #7e57c2 100%);
+    --social-text: #e0e0e0;
+    --social-hover-text: #ffffff;
+    --info-bg: #1e1e1e;
+    --info-icon-bg: #333333;
+    --form-input-bg: #1e1e1e;
+    --form-input-border: #333333;
+    --form-input-focus: #64b5f6;
+    --form-success-bg: #1b5e20;
+    --form-success-color: #81c784;
+    --form-error-bg: #b71c1c;
+    --form-error-color: #ef9a9a;
+    --map-placeholder-bg: #1e1e1e;
+    --timeline-bg: #1e1e1e;
+    --achievement-bg: #1e1e1e;
+    --project-card-bg: #1e1e1e;
+    --project-text: #b0b0b0;
+}
+
+/* 全局重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+/* 主题切换按钮样式 */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.theme-toggle:hover {
+    background-color: var(--border-color);
+}
+
+.theme-toggle svg {
+    position: absolute;
+    transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+/* 初始状态：浅色模式下显示月亮图标，隐藏太阳图标 */
+.light-icon {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.dark-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 深色模式下的图标状态 */
+body.dark-mode .light-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+body.dark-mode .dark-icon {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* 平滑过渡动画 */
+.theme-toggle svg path,
+.theme-toggle svg circle,
+.theme-toggle svg line {
+    transition: stroke var(--transition-speed) ease;
+}
+
+/* 确保图标颜色根据主题变化 */
+.theme-toggle svg {
+    color: var(--nav-text);
+}
+
+/* 头部导航样式 */
+header {
+    background-color: var(--header-bg);
+    color: var(--nav-text);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color var(--transition-speed) ease;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--nav-text);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color var(--transition-speed) ease;
+}
+
+nav ul li a:hover {
+    color: var(--nav-hover);
+    border-bottom: 2px solid var(--nav-hover);
+}
+
+/* 各部分通用样式 */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+section:nth-child(even) {
+    background-color: white;
+}
+
+/* 首页样式 */
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+}
+
+#home p {
+    font-size: 1.5rem;
+    color: var(--secondary-text);
+}
+
+/* 作品集样式 */
+.work-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.work-item {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s, box-shadow 0.3s, background-color var(--transition-speed) ease;
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.work-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.work-item-content {
+    padding: 1.5rem;
+}
+
+/* 关于我样式 */
+#about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* 个人简介样式 */
+.about-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-picture {
+    flex-shrink: 0;
+}
+
+.profile-placeholder {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: var(--progress-fill);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+.intro-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.intro-text h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--heading-color);
+}
+
+.subtitle {
+    color: var(--secondary-text);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.intro-text p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    transition: color var(--transition-speed) ease;
+}
+
+/* 技能部分样式 */
+.skills-section {
+    margin: 4rem 0;
+}
+
+.skills-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--heading-color);
+    text-align: center;
+}
+
+/* 动画样式 */
+.progress-bar {
+    height: 100%;
+    background: var(--progress-fill);
+    border-radius: 10px;
+    transition: width 1.5s ease-in-out;
+}
+
+/* 时间线动画 */
+.timeline-item {
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.timeline-item:nth-child(odd) {
+    transform: translateX(-50px);
+}
+
+.timeline-item:nth-child(even) {
+    transform: translateX(50px);
+}
+
+.timeline-item.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 成就卡片动画 */
+.achievement-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    text-align: left;
+    transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.skill-category h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--heading-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    transition: color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.skill-bar {
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.skill-name {
+    display: inline-block;
+    width: 80px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.skill-progress {
+    display: inline-block;
+    width: calc(100% - 140px);
+    height: 20px;
+    background-color: var(--progress-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 10px;
+    vertical-align: middle;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.skill-level {
+    display: inline-block;
+    width: 40px;
+    text-align: right;
+    font-weight: 500;
+    color: var(--secondary-text);
+    transition: color var(--transition-speed) ease;
+}
+
+/* 时间线样式 */
+.timeline-section {
+    margin: 4rem 0;
+}
+
+.timeline-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--heading-color);
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--accent-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: var(--timeline-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: transform 0.3s, box-shadow 0.3s, background-color var(--transition-speed) ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.timeline-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--heading-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.timeline-content .company {
+    color: var(--secondary-text);
+    margin-bottom: 1rem;
+    font-style: italic;
+    transition: color var(--transition-speed) ease;
+}
+
+.timeline-content ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.timeline-item:nth-child(odd) .timeline-content ul li::before {
+    content: '• ';
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.timeline-item:nth-child(even) .timeline-content ul li::before {
+    content: '• ';
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* 时间线圆点 */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--card-bg);
+    border: 4px solid var(--accent-color);
+    border-radius: 50%;
+    top: 20px;
+    z-index: 1;
+    transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+
+/* 成就部分样式 */
+.achievements-section {
+    margin: 4rem 0;
+}
+
+.achievements-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--heading-color);
+    text-align: center;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.achievement-card {
+    background: var(--achievement-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color var(--transition-speed) ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.achievement-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--heading-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.achievement-card p {
+    color: var(--secondary-text);
+    line-height: 1.6;
+    transition: color var(--transition-speed) ease;
+}
+
+/* 响应式设计 - 关于我部分 */
+@media (max-width: 768px) {
+    .about-intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .intro-text {
+        text-align: center;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(odd) {
+        left: 0;
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-item::after {
+        left: 21px;
+    }
+    
+    .skill-name, .skill-level {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+    
+    .skill-progress {
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-placeholder {
+        width: 150px;
+        height: 150px;
+        font-size: 2.5rem;
+    }
+    
+    .intro-text h3 {
+        font-size: 1.8rem;
+    }
+    
+    .skill-category {
+        padding: 1.5rem;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 联系部分样式 */
+#contact {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--heading-color);
+    text-align: center;
+    transition: color var(--transition-speed) ease;
+}
+
+/* 联系容器布局 */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    align-items: start;
+}
+
+/* 联系表单样式 */
+.contact-form-section h3,
+.contact-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--heading-color);
+    position: relative;
+    padding-bottom: 0.8rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.contact-form-section h3::after,
+.contact-details h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--progress-fill);
+    border-radius: 3px;
+    transition: background var(--transition-speed) ease;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 1rem;
+    border: 2px solid var(--form-input-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--form-input-bg);
+    color: var(--text-color);
+    transition: border-color 0.3s, box-shadow 0.3s, background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--form-input-focus);
+    box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.1);
+}
+
+.submit-btn {
+    padding: 1rem 2rem;
+    background: var(--progress-fill);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background var(--transition-speed) ease;
+    align-self: flex-start;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 181, 246, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* 联系信息样式 */
+.contact-info {
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--info-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    transition: transform 0.3s, box-shadow 0.3s, background-color var(--transition-speed) ease;
+}
+
+.info-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    padding: 0.5rem;
+    background-color: var(--info-icon-bg);
+    border-radius: 50%;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.info-text {
+    flex: 1;
+}
+
+.info-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin-bottom: 0.2rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.info-value {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color var(--transition-speed) ease;
+}
+
+.info-value a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.info-value a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* 社交媒体样式 */
+.social-media h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--social-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--social-text);
+    text-decoration: none;
+    transition: all 0.3s, background-color var(--transition-speed) ease, border-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    font-weight: 500;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    background: var(--social-hover);
+    color: var(--social-hover-text);
+    border-color: transparent;
+}
+
+.social-icon {
+    font-size: 1.2rem;
+}
+
+/* 地图样式 */
+.map-section {
+    margin-top: 3rem;
+}
+
+.map-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--heading-color);
+    text-align: center;
+    transition: color var(--transition-speed) ease;
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    background-color: var(--card-bg);
+    min-height: 400px;
+    transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.map-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background-color: var(--map-placeholder-bg);
+    color: var(--secondary-text);
+    text-align: center;
+    padding: 2rem;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+.map-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.map-placeholder p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* 响应式设计 - 联系部分 */
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .submit-btn {
+        align-self: stretch;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-form-section h3,
+    .contact-details h3,
+    .map-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .social-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact {
+        padding: 3rem 1rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .map-placeholder {
+        height: 300px;
+    }
+    
+    .map-icon {
+        font-size: 3rem;
+    }
+}
+
+/* 页脚样式 */
+footer {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    padding: 2rem;
+    text-align: center;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+    
+    #home h1 {
+        font-size: 2.5rem;
+    }
+    
+    #home p {
+        font-size: 1.2rem;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    #home h1 {
+        font-size: 2rem;
+    }
+    
+    .work-container {
+        grid-template-columns: 1fr;
+    }
+}
