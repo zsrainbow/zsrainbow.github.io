@@ -1,0 +1,304 @@
+<!--
+ * @file index.html
+ * @description 个人作品集网站主页面
+ * @author 黄劭
+ * @version 1.0.0
+ * @date 2025-01-01
+ * @copyright (c) 2025 个人作品集. 保留所有权利.
+ -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黄劭的作品集</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">我的作品集</div>
+        <div class="nav-right">
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="zh">中文</button>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
+            <ul>
+                <li><a href="#home" data-lang-key="nav-home">首页</a></li>
+                <li><a href="#about" data-lang-key="nav-about">关于我</a></li>
+                <li><a href="#works" data-lang-key="nav-works">作品展示</a></li>
+                <li><a href="#contact" data-lang-key="nav-contact">联系方式</a></li>
+            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1 data-lang-key="hero-title">欢迎来到我的作品集</h1>
+        <p data-lang-key="hero-subtitle">展示我的创意和技术能力</p>
+        <a href="#works" class="btn"><span data-lang-key="hero-btn">查看作品</span></a>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 data-lang-key="about-title">关于我</h2>
+            
+            <!-- 个人简介 -->
+            <div class="about-content">
+                <div class="about-intro">
+                    <p>你好，我是黄劭，一名充满激情的游戏内容创作者和视频编辑。我专注于制作高质量的游戏集锦视频，展示游戏中的精彩瞬间、策略和技巧。</p>
+                    <p>我对游戏内容创作有着深厚的热情，擅长捕捉游戏中的精彩时刻，并通过专业的视频编辑手法将其呈现给观众。我的目标是制作既有娱乐性又有教学价值的游戏内容。</p>
+                </div>
+            </div>
+            
+            <!-- 技能展示 -->
+            <div class="skills-section">
+                <h3>专业技能</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">视频编辑</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                        <div class="skill-level">Adobe Premiere Pro / DaVinci Resolve</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">游戏内容创作</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                        <div class="skill-level">FPS游戏专精</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">视觉特效</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                        <div class="skill-level">Adobe After Effects</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">音频处理</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                        <div class="skill-level">Audacity / Adobe Audition</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">内容策划</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                        <div class="skill-level">视频脚本与创意</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">直播技术</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                        <div class="skill-level">OBS Studio / Streamlabs</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 专业经历时间线 -->
+            <div class="timeline-section">
+                <h3>创作经历</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - 至今</div>
+                        <div class="timeline-content">
+                            <h4>B站游戏内容创作者</h4>
+                            <p>独立制作并发布游戏集锦视频，专注于FPS游戏内容，积累了稳定的粉丝群体。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 - 2023</div>
+                        <div class="timeline-content">
+                            <h4>游戏视频编辑实习生</h4>
+                            <p>在游戏媒体公司担任视频编辑实习生，参与制作多款游戏的宣传视频和内容。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019 - 2021</div>
+                        <div class="timeline-content">
+                            <h4>游戏直播主播</h4>
+                            <p>在多个平台进行游戏直播，积累了丰富的互动经验和内容创作能力。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 个人成就 -->
+            <div class="achievements-section">
+                <h3>个人成就</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-item">
+                        <div class="achievement-icon">🏆</div>
+                        <div class="achievement-content">
+                            <h4>内容创作比赛奖</h4>
+                            <p>获得某知名游戏厂商举办的视频创作比赛二等奖</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">📈</div>
+                        <div class="achievement-content">
+                            <h4>视频播放量突破</h4>
+                            <p>累计视频播放量突破100万次</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">🎮</div>
+                        <div class="achievement-content">
+                            <h4>游戏赛事参与</h4>
+                            <p>作为解说参与多场本地游戏赛事直播</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="works">
+        <div class="container">
+            <h2 data-lang-key="works-title">作品展示</h2>
+            <div class="works-grid">
+                <!-- 作品项目将通过JavaScript动态添加 -->
+                <!-- 作品1 - 请将href替换为实际视频链接 -->
+                <div class="work-item">
+                    <a href="https://www.bilibili.com/video/BV1ADHQzdEDg/?spm_id_from=333.1387.homepage.video_card.click" class="work-link" target="_blank">
+                        <div class="work-img">
+                            <img src="images/sjz.jpg" alt="作品1">
+                        </div>
+                        <div class="work-info">
+                            <h3>三角洲行动集锦</h3>
+                            <p>这是一个关于三角洲行动的视频集锦，展示了在游戏中的表现和策略。</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- 作品2 - 请将href替换为实际视频链接 -->
+                <div class="work-item">
+                    <a href="https://www.bilibili.com/video/BV1Jr4y1H7HJ/?spm_id_from=333.337.search-card.all.click" class="work-link" target="_blank">
+                        <div class="work-img">
+                            <img src="images/csgo.jpg" alt="作品2">
+                        </div>
+                        <div class="work-info">
+                            <h3>csgo2搞笑集锦</h3>
+                            <p>这是一个关于csgo2的搞笑视频集锦，展示了在游戏中的幽默娱乐片段。</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- 作品3 - 请将href替换为实际视频链接 -->
+                <div class="work-item">
+                    <a href="https://www.bilibili.com/video/BV1cK411i72p/?spm_id_from=333.337.search-card.all.click" class="work-link" target="_blank">
+                        <div class="work-img">
+                            <img src="images/valorant.jpeg" alt="作品3">
+                        </div>
+                        <div class="work-info">
+                            <h3>valorant击杀集锦</h3>
+                            <p>这是一个关于valorant的击杀视频集锦，展示了在游戏中的精彩瞬间。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>联系方式</h2>
+            <div class="contact-container">
+                <!-- 联系表单 -->
+                <div class="contact-form-section">
+                    <h3 data-lang-key="contact-form-title">给我留言</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-lang-key="form-name">姓名</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-lang-key="form-email">邮箱</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-lang-key="form-message">留言</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" data-lang-key="form-submit">发送</button>
+                    </form>
+                </div>
+                
+                <!-- 联系信息和社交媒体 -->
+                <div class="contact-info-section">
+                    <h3 data-lang-key="contact-info-title">联系信息</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-text">邮箱: 1094097440@qq.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-text">电话: 134-1528-5246</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">地址: 广东省中山市石岐区学院路1号</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 社交媒体链接 -->
+                    <div class="social-media">
+                        <h4 data-lang-key="social-title">关注我</h4>
+                        <div class="social-links">
+                            <a href="https://www.bilibili.com" class="social-link" target="_blank">
+                                <div class="social-icon">📺</div>
+                                <span>我的B站</span>
+                            </a>
+                            <a href="https://www.weibo.com" class="social-link" target="_blank">
+                                <div class="social-icon">🔴</div>
+                                <span>我的微博</span>
+                            </a>
+                            <a href="https://www.qq.com" class="social-link" target="_blank">
+                                <div class="social-icon">🐧</div>
+                                <span>我的QQ</span>
+                            </a>
+                            <a href="https://www.wechat.com" class="social-link" target="_blank">
+                                <div class="social-icon">💬</div>
+                                <span>我的微信</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 地图显示 -->
+            <div class="map-section">
+                <h3 data-lang-key="map-title">我的位置</h3>
+                <div class="map-container">
+                    <!-- 嵌入百度地图，使用广东省中山市石岐区学院路1号的位置 -->
+                    <!-- 注意：实际使用时，您需要在百度地图开发者平台(https://lbsyun.baidu.com/)申请API密钥(AK) -->
+                    <iframe 
+                        src="https://api.map.baidu.com/marker?location=113.398184,22.535868&title=我的位置&content=广东省中山市石岐区学院路1号&output=html&wd=广东省中山市石岐区学院路1号&pn=0&nn=0&ie=utf-8&s=close" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0; border-radius: 10px;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        title="我的位置地图"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-lang-key="footer-text">&copy; 2024 黄劭作品集. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
