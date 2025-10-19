@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="个人作品集网站">
+    <title>我的作品集</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" data-i18n="logo.text">我的作品集</div>
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav.home">首页</a></li>
+                <li><a href="#about" data-i18n="nav.about">关于我</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">项目</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">联系</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="language-switcher">
+                    <button id="lang-zh" class="lang-btn active" data-lang="zh">中文</button>
+                    <button id="lang-en" class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 data-i18n="hero.title">欢迎来到我的作品集</h1>
+                <p data-i18n="hero.subtitle">展示我的创意作品和技术项目</p>
+                <button id="cta-button" class="cta-btn" data-i18n="hero.button">查看作品</button>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 data-i18n="about.title">关于我</h2>
+            <div class="about-content">
+                <div class="about-intro">
+                    <div class="profile-image">
+                        <img src="images/profile.jpg" alt="个人头像" onerror="this.style.display='none'">
+                        <div class="profile-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="intro-text">
+                        <h3 data-i18n="about.subtitle">个人简介</h3>
+                        <p data-i18n="about.description">我是一名充满激情的全栈开发者，拥有5年以上的Web开发经验。擅长使用现代技术栈构建高性能、用户友好的应用程序。</p>
+                        <div class="skills">
+                            <h4 data-i18n="about.skills">技术技能</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Vue.js</span>
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-section">
+                    <h3 data-i18n="about.experience">专业经历</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date" data-i18n="timeline.date1">2022 - 至今</div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="about.job1.title">高级全栈开发者 - TechCorp</h4>
+                                <p data-i18n="about.job1.description">负责领导开发团队，构建企业级Web应用程序，优化系统性能。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date" data-i18n="timeline.date2">2020 - 2022</div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="about.job2.title">前端开发者 - WebSolutions</h4>
+                                <p data-i18n="about.job2.description">开发响应式网站和单页面应用，与设计团队紧密合作。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date" data-i18n="timeline.date3">2018 - 2020</div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="about.job3.title">初级开发者 - StartupXYZ</h4>
+                                <p data-i18n="about.job3.description">参与多个项目的开发，学习现代开发最佳实践。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="achievements">
+                    <h3 data-i18n="about.achievements">成就与证书</h3>
+                    <div class="certificates">
+                        <div class="certificate">
+                            <i class="fas fa-award"></i>
+                            <span data-i18n="about.cert1">AWS认证解决方案架构师</span>
+                        </div>
+                        <div class="certificate">
+                            <i class="fas fa-award"></i>
+                            <span data-i18n="about.cert2">React专业开发者认证</span>
+                        </div>
+                        <div class="certificate">
+                            <i class="fas fa-award"></i>
+                            <span data-i18n="about.cert3">Google Cloud认证</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 data-i18n="projects.title">我的项目</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 data-i18n="projects.project1.title">电商平台</h3>
+                    <p data-i18n="projects.project1.description">基于React和Node.js构建的全栈电商平台，支持用户注册、商品浏览、购物车、支付等功能。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Stripe</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> 代码</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> 演示</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 data-i18n="projects.project2.title">任务管理应用</h3>
+                    <p data-i18n="projects.project2.description">现代化的任务管理工具，支持团队协作、实时通知、文件上传和进度跟踪。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">Socket.io</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> 代码</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> 演示</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-i18n="projects.project3.title">数据分析仪表板</h3>
+                    <p data-i18n="projects.project3.description">实时数据可视化平台，集成多种数据源，提供交互式图表和自定义报表功能。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> 代码</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> 演示</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 data-i18n="projects.project4.title">移动应用</h3>
+                    <p data-i18n="projects.project4.description">跨平台移动应用，使用React Native开发，支持iOS和Android，具有优秀的用户体验。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Redux</span>
+                        <span class="tech-tag">Expo</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> 代码</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> 演示</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 data-i18n="contact.title">联系我</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-i18n="contact.getInTouch">保持联系</h3>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4 data-i18n="contact.email">邮箱</h4>
+                                <p>hello@portfolio.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 data-i18n="contact.phone">电话</h4>
+                                <p>+86 138 0000 0000</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4 data-i18n="contact.location">位置</h4>
+                                <p data-i18n="contact.address">中国，北京市</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4 data-i18n="contact.followMe">关注我</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-weibo"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="contact-form" class="contact-form">
+                    <h3 data-i18n="contact.sendMessage">发送消息</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="姓名" required data-i18n-placeholder="contact.name">
+                        <input type="email" placeholder="邮箱" required data-i18n-placeholder="contact.email">
+                    </div>
+                    <input type="text" placeholder="主题" data-i18n-placeholder="contact.subject">
+                    <textarea placeholder="消息内容" required data-i18n-placeholder="contact.message"></textarea>
+                    <button type="submit" data-i18n="contact.send">发送消息</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
