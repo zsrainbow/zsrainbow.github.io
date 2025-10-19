@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="张智均的个人作品集网站，展示最新的前端开发项目和设计作品">
+  <meta name="keywords" content="个人作品集,前端开发,Web设计,项目展示">
+  <title>张智均 - 个人作品集网站</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- 高德地图API -->
+  <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=b009042a3c95239315b948004b9e5a86"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">个人作品集</h1>
+      <nav class="main-nav" id="main-nav" role="navigation">
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="切换导航">菜单</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#top" aria-current="page">首页</a></li>
+          <li><a href="#projects">作品</a></li>
+          <li><a href="#about">关于</a></li>
+          <li><a href="#contact">联系</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-toggle" aria-label="切换主题模式">🌓</button>
+            <button id="language-toggle" class="language-toggle" aria-label="切换语言">中文</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container">
+        <h2>你好，我是张智均</h2>
+        <p>欢迎查看我的个人作品集网站，这里展示了我的最新作品和项目。</p>
+      </div>
+    </section>
+
+    <section id="projects" class="projects container">
+      <h3>作品展示</h3>
+      <div class="project-grid">
+        <article class="project-card" data-title="绿色星云中的飞碟舰队">
+          <img src="images/p1.png" alt="绿色星云中的飞碟舰队">
+          <h4>绿色星云中的飞碟舰队</h4>
+          <p>一艘巨大的飞碟型宇宙战舰悬停在翠绿星云之中，其表面布满发光的绿色电路纹路，周围小型飞船穿梭飞行，发射出彩色激光。远处行星与陨石群点缀其间，构成一幅神秘而宏大的太空奇观。</p>
+          <button class="view-btn" aria-label="查看绿色星云中的飞碟舰队作品">查看</button>
+        </article>
+
+        <article class="project-card" data-title="宇宙决战中的巨型机甲">
+          <img src="images/p2.png" alt="宇宙决战中的巨型机甲">
+          <h4>宇宙决战中的巨型机甲</h4>
+          <p>在炽烈燃烧的恒星背景前，一台庞大的变形机甲矗立于太空战场中心，四架战机环绕其周身，释放出金色能量束。整个画面充满动感与力量，象征着一场史诗级的星际对决正在上演。</p>
+          <button class="view-btn" aria-label="查看宇宙决战中的巨型机甲作品">查看</button>
+        </article>
+
+        <article class="project-card" data-title="太空机甲基地内部">
+          <img src="images/p3.png" alt="太空机甲基地内部">
+          <h4>太空机甲基地内部</h4>
+          <p>在深邃宇宙的映衬下，一艘巨型空间站内，多台机甲正沿着传送带有序行进。透明穹顶外，壮丽的星系旋臂清晰可见，而前景中悬浮的全息界面显示着复杂的系统数据，展现出未来科技与机械美学的完美融合。</p>
+          <button class="view-btn" aria-label="查看太空机甲基地内部作品">查看</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h3>关于我</h3>
+      
+      <!-- 个人简介和技能 -->
+      <div class="about-content">
+        <div class="about-text">
+          <p>我是一名热爱技术与设计的前端开发者，拥有5年以上的Web开发经验。专注于创建用户友好、性能优化的现代Web应用程序。热衷于学习新技术，解决复杂问题，并致力于提供高质量的代码和卓越的用户体验。</p>
+          
+          <h4>专业技能</h4>
+          <ul class="skills-list">
+            <li>HTML5 / CSS3 / JavaScript (ES6+)</li>
+            <li>React.js / Vue.js / Angular</li>
+            <li>Node.js / Express</li>
+            <li>Webpack / Vite</li>
+            <li>响应式设计 / 移动优先</li>
+            <li>UI/UX 设计原则</li>
+            <li>RESTful API / GraphQL</li>
+            <li>Git / CI/CD</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- 专业经历时间线 -->
+      <div class="experience-section">
+        <h4>专业经历</h4>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2022年 - 至今</div>
+            <div class="timeline-content">
+              <h5>高级前端工程师 - 科技有限公司</h5>
+              <p>负责大型Web应用的架构设计和核心功能开发，带领5人前端团队，优化应用性能，提升用户体验。</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">2020年 - 2022年</div>
+            <div class="timeline-content">
+              <h5>前端工程师 - 创新科技公司</h5>
+              <p>参与多个客户项目的前端开发工作，使用React和Vue构建响应式Web应用，与设计团队紧密合作实现高质量界面。</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">2018年 - 2020年</div>
+            <div class="timeline-content">
+              <h5>初级前端开发 - 网络技术公司</h5>
+              <p>负责维护和开发公司官网及内部管理系统，使用HTML、CSS和JavaScript实现交互功能。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 个人成就和证书 -->
+      <div class="achievements-section">
+        <h4>个人成就与证书</h4>
+        <div class="achievements-grid">
+          <div class="achievement-item">
+            <h5>Google认证 - 专业Web开发者</h5>
+            <p class="achievement-date">2023年获得</p>
+            <p>验证了在构建高性能、可访问的Web应用方面的专业技能。</p>
+          </div>
+          
+          <div class="achievement-item">
+            <h5>开源项目贡献者</h5>
+            <p class="achievement-date">2021年至今</p>
+            <p>在多个知名开源项目中贡献代码，包括React生态系统中的工具库。</p>
+          </div>
+          
+          <div class="achievement-item">
+            <h5>公司年度最佳员工</h5>
+            <p class="achievement-date">2022年</p>
+            <p>因在项目中的卓越表现和团队协作精神获得此荣誉。</p>
+          </div>
+          
+          <div class="achievement-item">
+            <h5>前端性能优化专家</h5>
+            <p class="achievement-date">2021年</p>
+            <p>成功将主要产品的加载时间减少40%，显著提升用户体验。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h3>联系</h3>
+      
+      <div class="contact-content">
+        <!-- 联系表单 -->
+        <div class="contact-form">
+          <h4>发送消息</h4>
+          <form id="contactForm" aria-label="联系表单">
+            <div class="form-group">
+              <label for="name">姓名</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">邮箱</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">留言</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">发送消息</button>
+          </form>
+        </div>
+        
+        <!-- 联系信息和社交媒体 -->
+        <div class="contact-info">
+          <h4>联系信息</h4>
+          <ul class="contact-list">
+            <li>邮箱：<a href="mailto:2217594081@qq.com">2217594081@qq.com</a></li>
+            <li>电话：<a href="tel:10086">10086</a></li>
+            <li>地址：银河系·太阳区·地球村</li>
+          </ul>
+          
+          <h4>社交媒体</h4>
+          <div class="social-links">
+            <a href="https://github.com" target="_blank" class="social-link" aria-label="访问我的GitHub">
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="访问我的LinkedIn">
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-link" aria-label="访问我的Twitter">
+              <span>Twitter</span>
+            </a>
+            <a href="https://weibo.com" target="_blank" class="social-link" aria-label="访问我的微博">
+              <span>微博</span>
+            </a>
+          </div>
+          
+          <!-- 地图 -->
+          <h4>我的位置</h4>
+          <div class="map-container">
+            <div id="map-container" style="width: 100%; height: 300px;"></div>
+            <script>
+              // 初始化高德地图
+              function initMap(userPosition) {
+                // 如果获取到用户位置，则使用用户位置作为中心点，否则使用默认位置（北京）
+                var centerPosition = userPosition ? userPosition : [116.397428, 39.90923];
+                
+                var map = new AMap.Map('map-container', {
+                  zoom: 13,
+                  center: centerPosition,
+                  mapStyle: 'amap://styles/normal' // 设置地图样式
+                });
+                
+                // 添加标记点
+                var marker = new AMap.Marker({
+                  position: centerPosition,
+                  title: userPosition ? '您的位置' : '默认位置',
+                  map: map
+                });
+                
+                // 添加信息窗口
+                var infoWindow = new AMap.InfoWindow({
+                  content: '<div style="padding: 5px;">' + (userPosition ? '您的位置' : '默认位置') + '</div>',
+                  offset: new AMap.Pixel(0, -20)
+                });
+                
+                // 点击标记点时打开信息窗口
+                marker.on('click', function() {
+                  infoWindow.open(map, marker.getPosition());
+                });
+              }
+              
+              // 获取用户当前位置
+              function getUserLocation() {
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                      // 成功获取位置
+                      var userPosition = [position.coords.longitude, position.coords.latitude];
+                      console.log("用户位置:", userPosition);
+                      initMap(userPosition);
+                    },
+                    function(error) {
+                      // 获取位置失败，使用默认位置
+                      console.error("获取位置失败:", error);
+                      initMap(); // 使用默认位置初始化地图
+                    },
+                    {
+                      enableHighAccuracy: true, // 高精度
+                      timeout: 10000,           // 超时时间10秒
+                      maximumAge: 60000         // 缓存时间1分钟
+                    }
+                  );
+                } else {
+                  // 浏览器不支持地理定位
+                  console.log("浏览器不支持地理定位");
+                  initMap(); // 使用默认位置初始化地图
+                }
+              }
+              
+              // 页面加载完成后获取用户位置
+              window.onload = function() {
+                getUserLocation();
+              };
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© 2025 ZHANGZHIJUN</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
