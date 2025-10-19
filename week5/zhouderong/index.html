@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人作品集 | 科技感设计</title>
+    <meta name="description" content="专业的全栈开发者个人作品集，展示技能、项目和联系方式">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>我的作品集</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">首页</a></li>
+                <li><a href="#about" class="nav-link">关于我</a></li>
+                <li><a href="#skills" class="nav-link">技能评估</a></li>
+                <li><a href="#projects" class="nav-link">项目</a></li>
+                <li><a href="#certifications" class="nav-link">证书</a></li>
+                <li><a href="#blog" class="nav-link">博客</a></li>
+                <li><a href="#contact" class="nav-link">联系我</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>欢迎来到我的科技世界</h2>
+            <p>我是一名全栈开发者，专注于创建高效、创新的数字体验和解决方案</p>
+            <a href="#projects" class="btn">探索我的项目</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>关于我</h2>
+            <!-- 简历下载按钮 -->
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <a href="#resume-modal" id="resume-download-btn" class="btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px; vertical-align: middle;">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+                    </svg>
+                    下载完整简历
+                </a>
+            </div>
+            <div class="about-content">
+                <div class="profile-image">
+                    <img src="images/person.jpg" alt="个人照片" class="profile-pic">
+                </div>
+                <div class="profile-info">
+                    <h3 class="tech-line">个人简介</h3>
+                    <p>我是一名充满激情的全栈开发者，拥有丰富的行业经验。我专注于创建高性能、可扩展的Web应用和创新的用户体验。我不断探索前沿技术，致力于将复杂的技术问题转化为优雅的解决方案。</p>
+                    
+                    <h3 class="tech-line">专业技能</h3>
+                    <div class="skills">
+                        <div class="skill">HTML5</div>
+                        <div class="skill">CSS3</div>
+                        <div class="skill">JavaScript</div>
+                        <div class="skill">TypeScript</div>
+                        <div class="skill">React</div>
+                        <div class="skill">Vue.js</div>
+                        <div class="skill">Node.js</div>
+                        <div class="skill">Next.js</div>
+                        <div class="skill">GraphQL</div>
+                        <div class="skill">MongoDB</div>
+                        <div class="skill">Docker</div>
+                        <div class="skill">AWS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2>技能评估</h2>
+            <div class="skills-container">
+                <!-- 技术技能评估 -->
+                <div class="skill-category">
+                    <h3 class="tech-line">前端开发</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML5 / CSS3</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript / TypeScript</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">React / Vue</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">响应式设计</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="92"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 后端技能评估 -->
+                <div class="skill-category">
+                    <h3 class="tech-line">后端开发</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Express / Koa</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">MongoDB / MySQL</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">GraphQL</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 全栈技能评估 -->
+                <div class="skill-category">
+                    <h3 class="tech-line">全栈能力</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">DevOps</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">AWS / Azure</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Docker / Kubernetes</span>
+                                <span class="skill-percentage">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">敏捷开发</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 软技能评估 -->
+                <div class="skill-category">
+                    <h3 class="tech-line">软技能</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">项目管理</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">团队协作</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">沟通表达</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">问题解决</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>精选项目</h2>
+            
+            <!-- 项目过滤标签 -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="web">Web应用</button>
+                <button class="filter-btn" data-filter="data">数据分析</button>
+                <button class="filter-btn" data-filter="iot">物联网</button>
+                <button class="filter-btn" data-filter="blockchain">区块链</button>
+            </div>
+            
+            <div class="project-grid">
+                <!-- 数据分析项目 -->
+                <div class="project-card" data-category="data">
+                    <div class="project-image" style="background-image: url('images/data-analysis.svg'); background-size: cover; background-position: center;">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span>数据分析</span>
+                                <span>React</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>智能数据分析平台</h3>
+                        <p>基于React和Node.js构建的实时数据分析平台，采用机器学习算法提供预测分析功能。</p>
+                        <a href="#" class="btn project-btn">查看详情</a>
+                    </div>
+                </div>
+                
+                <!-- 物联网项目 -->
+                <div class="project-card" data-category="iot">
+                    <div class="project-image" style="background-image: url('images/iot.png'); background-size: cover; background-position: center;">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span>物联网</span>
+                                <span>Python</span>
+                                <span>AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>智能家居监控系统</h3>
+                        <p>基于物联网技术的智能家居监控系统，支持远程控制和实时数据分析，保障家庭安全。</p>
+                        <a href="#" class="btn project-btn">查看详情</a>
+                    </div>
+                </div>
+                
+                <!-- 区块链项目 -->
+                <div class="project-card" data-category="blockchain">
+                    <div class="project-image" style="background-image: url('images/blockchain.jpeg'); background-size: cover; background-position: center;">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span>区块链</span>
+                                <span>智能合约</span>
+                                <span>Web3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>去中心化金融应用</h3>
+                        <p>基于区块链技术的去中心化金融应用，支持智能合约自动化交易和资产代币化管理。</p>
+                        <a href="#" class="btn project-btn">查看详情</a>
+                    </div>
+                </div>
+                
+                <!-- AR/VR项目 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image" style="background-image: url('images/ar-vr.webp'); background-size: cover; background-position: center;">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span>AR/VR</span>
+                                <span>Three.js</span>
+                                <span>WebGL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>沉浸式AR产品展示</h3>
+                        <p>基于WebGL和Three.js开发的增强现实产品展示平台，提供交互式3D体验和产品可视化。</p>
+                        <a href="#" class="btn project-btn">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2>专业证书</h2>
+            <div class="certifications-grid">
+                <!-- 证书卡片 1 -->
+                <div class="certification-card glassmorphism">
+                    <div class="cert-icon">
+                        <img src="images/certificate-icon.svg" alt="AWS认证图标">
+                    </div>
+                    <div class="cert-content">
+                        <h3>AWS 认证解决方案架构师</h3>
+                        <p>Amazon Web Services</p>
+                        <div class="cert-details">
+                            <span class="cert-date">2023年6月</span>
+                            <span class="cert-badge">专业级</span>
+                        </div>
+                        <p class="cert-description">云架构设计与实施专业认证，验证在AWS平台上设计、部署和管理应用程序的能力。</p>
+                    </div>
+                </div>
+                
+                <!-- 证书卡片 2 -->
+                <div class="certification-card glassmorphism">
+                    <div class="cert-icon">
+                        <img src="images/certificate-icon.svg" alt="Google认证图标">
+                    </div>
+                    <div class="cert-content">
+                        <h3>Google Professional Web Developer</h3>
+                        <p>Google Developers</p>
+                        <div class="cert-details">
+                            <span class="cert-date">2023年3月</span>
+                            <span class="cert-badge">专家级</span>
+                        </div>
+                        <p class="cert-description">验证在现代Web开发中使用Google技术栈构建高性能、可扩展Web应用的专业能力。</p>
+                    </div>
+                </div>
+                
+                <!-- 证书卡片 3 -->
+                <div class="certification-card glassmorphism">
+                    <div class="cert-icon">
+                        <img src="images/certificate-icon.svg" alt="Microsoft认证图标">
+                    </div>
+                    <div class="cert-content">
+                        <h3>Microsoft Azure开发专家</h3>
+                        <p>Microsoft Learn</p>
+                        <div class="cert-details">
+                            <span class="cert-date">2022年12月</span>
+                            <span class="cert-badge">专家级</span>
+                        </div>
+                        <p class="cert-description">Azure云平台开发认证，专注于构建、部署和优化云原生应用程序和服务。</p>
+                    </div>
+                </div>
+                
+                <!-- 证书卡片 4 -->
+                <div class="certification-card glassmorphism">
+                    <div class="cert-icon">
+                        <img src="images/certificate-icon.svg" alt="区块链认证图标">
+                    </div>
+                    <div class="cert-content">
+                        <h3>区块链应用开发专业认证</h3>
+                        <p>Blockchain Council</p>
+                        <div class="cert-details">
+                            <span class="cert-date">2022年9月</span>
+                            <span class="cert-badge">专业级</span>
+                        </div>
+                        <p class="cert-description">区块链技术与应用开发认证，涵盖智能合约开发、分布式应用架构设计等领域。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2>技术博客</h2>
+            <div class="blog-grid">
+                <!-- 博客文章 1 -->
+                <article class="blog-post">
+                    <div class="blog-image">
+                        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#1a1c2e"/>
+                            <path d="M50,30 L150,30 L150,120 L50,120 Z" fill="none" stroke="#4fc3f7" stroke-width="2"/>
+                            <circle cx="80" cy="60" r="10" fill="#9c27b0"/>
+                            <rect x="100" y="50" width="30" height="20" fill="#4fc3f7"/>
+                            <path d="M70,90 L130,90" stroke="#4fc3f7" stroke-width="3"/>
+                            <path d="M70,105 L120,105" stroke="#4fc3f7" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">2023-12-15</span>
+                            <span class="blog-category">前端开发</span>
+                        </div>
+                        <h3>现代前端框架对比：React vs Vue vs Angular</h3>
+                        <p>深入分析三大主流前端框架的优缺点，帮助开发者选择最适合自己项目的技术栈。</p>
+                        <a href="#" class="blog-read-more">阅读全文</a>
+                    </div>
+                </article>
+                
+                <!-- 博客文章 2 -->
+                <article class="blog-post">
+                    <div class="blog-image">
+                        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#1a1c2e"/>
+                            <path d="M40,40 L160,40 L160,110 L40,110 Z" fill="none" stroke="#9c27b0" stroke-width="2"/>
+                            <circle cx="70" cy="60" r="15" fill="#4fc3f7"/>
+                            <circle cx="130" cy="60" r="15" fill="#4fc3f7"/>
+                            <path d="M60,90 L140,90" stroke="#9c27b0" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">2023-11-28</span>
+                            <span class="blog-category">全栈开发</span>
+                        </div>
+                        <h3>构建可扩展的微服务架构：最佳实践指南</h3>
+                        <p>探讨微服务架构的设计原则、服务划分策略和常见挑战，以及如何构建高效的DevOps流程。</p>
+                        <a href="#" class="blog-read-more">阅读全文</a>
+                    </div>
+                </article>
+                
+                <!-- 博客文章 3 -->
+                <article class="blog-post">
+                    <div class="blog-image">
+                        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#1a1c2e"/>
+                            <path d="M50,30 L150,30 L150,120 L50,120 Z" fill="none" stroke="#4fc3f7" stroke-width="2"/>
+                            <polygon points="100,40 120,70 80,70" fill="#9c27b0"/>
+                            <path d="M70,80 L130,80 L120,110 L80,110 Z" fill="#4fc3f7"/>
+                        </svg>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">2023-10-10</span>
+                            <span class="blog-category">性能优化</span>
+                        </div>
+                        <h3>Web性能优化实战：从加载到渲染</h3>
+                        <p>详细介绍现代Web应用的性能优化策略，包括资源加载优化、渲染优化和运行时优化。</p>
+                        <a href="#" class="blog-read-more">阅读全文</a>
+                    </div>
+                </article>
+                
+                <!-- 博客文章 4 -->
+                <article class="blog-post">
+                    <div class="blog-image">
+                        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#1a1c2e"/>
+                            <circle cx="100" cy="75" r="40" fill="none" stroke="#9c27b0" stroke-width="2"/>
+                            <path d="M100,35 L100,55" stroke="#4fc3f7" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M100,95 L100,115" stroke="#4fc3f7" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M55,75 L75,75" stroke="#4fc3f7" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M125,75 L145,75" stroke="#4fc3f7" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">2023-09-05</span>
+                            <span class="blog-category">云计算</span>
+                        </div>
+                        <h3>AWS与Azure对比：企业云迁移策略分析</h3>
+                        <p>比较AWS和Azure两大云平台的特性、成本结构和适用场景，制定合理的云迁移路线图。</p>
+                        <a href="#" class="blog-read-more">阅读全文</a>
+                    </div>
+                </article>
+            </div>
+            <div class="blog-more" style="text-align: center; margin-top: 3rem;">
+                <a href="#" class="btn">查看更多文章</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>联系我</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3 class="tech-line">发送消息</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="您的姓名" required>
+                        <input type="email" placeholder="您的邮箱" required>
+                        <textarea placeholder="请输入您的留言内容" required></textarea>
+                        <button type="submit" class="btn">发送消息</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3 class="tech-line">联系方式</h3>
+                    <p>✉️ 邮箱: 1044305495@qq.com</p>
+                    <p>📱 电话: +86 17512980636</p>
+                    <p>📍 位置: 中国 中山</p>
+                    <div class="skills" style="margin-top: 2rem;">
+                        <a href="#" class="skill">GitHub</a>
+                        <a href="#" class="skill">LinkedIn</a>
+                        <a href="#" class="skill">Twitter</a>
+                        <a href="#" class="skill">WeChat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 周德荣个人作品集网站 | 科技驱动的创新解决方案</p>
+            <p>联系我：1044305495@qq.com 微信：17512980636</p>
+            <p>违者必究</p>
+        </div>
+    </footer>
+
+    <!-- 简历下载模态框 -->
+    <div id="resume-modal" class="resume-modal">
+        <div class="resume-modal-content">
+            <div class="resume-modal-header">
+                <h3>下载我的简历</h3>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+            <div class="resume-modal-body">
+                <div class="resume-options">
+                    <div class="resume-option">
+                        <div class="resume-icon">📄</div>
+                        <h4>PDF版本</h4>
+                        <p>完整版简历，包含详细工作经历和项目经验</p>
+                        <a href="#" class="btn">下载PDF</a>
+                    </div>
+                    <div class="resume-option">
+                        <div class="resume-icon">📋</div>
+                        <h4>简洁版本</h4>
+                        <p>精简版简历，重点突出核心技能和关键项目</p>
+                        <a href="#" class="btn">下载PDF</a>
+                    </div>
+                    <div class="resume-option">
+                        <div class="resume-icon">💼</div>
+                        <h4>专业方向</h4>
+                        <p>针对特定岗位定制的简历版本</p>
+                        <select class="resume-select">
+                            <option>前端开发</option>
+                            <option>后端开发</option>
+                            <option>全栈开发</option>
+                            <option>DevOps工程师</option>
+                        </select>
+                        <a href="#" class="btn">下载定制版</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
