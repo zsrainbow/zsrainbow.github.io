@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人作品集</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Holns的作品集</div>
+            <ul class="nav-links">
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#works">作品集</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>您好，我是一名创意设计师</h1>
+            <p>专注于创造独特而有意义的设计作品</p>
+            <a href="#works" class="btn">查看作品集</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>关于我</h2>
+            <div class="about-content">
+                <div class="profile-img">
+                    <!-- 个人照片 -->
+                    <img src="images/个人照片.jpg" alt="个人照片" class="profile-image">
+                </div>
+                <div class="bio">
+                    <p>我是一名充满激情的设计师，专注于UI/UX设计和前端开发。我热爱创造既美观又实用的数字产品，注重用户体验和视觉细节。</p>
+                    <p>我的设计理念是将功能性与艺术性完美结合，为用户创造愉悦的交互体验。在过去的几年中，我参与了多个不同规模和类型的项目，积累了丰富的实战经验。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="works">
+        <div class="container">
+            <h2>作品集</h2>
+            <div class="works-grid">
+                <!-- 作品项目1 -->
+                <a href="xiaohongshu-detail.html" class="work-item">
+                    <div class="work-img">
+                        <img src="images/小红书.jpg" alt="小红书项目" class="work-image">
+                    </div>
+                    <h3>"小红书界面设计"页重构</h3>
+                    <p>基于小红书平台的用户界面设计优化项目</p>
+                </a>
+                <!-- 作品项目2 -->
+                <a href="baidu-detail.html" class="work-item">
+                    <div class="work-img">
+                        <img src="images/百度一下.jpg" alt="百度一下项目" class="work-image">
+                    </div>
+                    <h3>"百度搜索"页重构</h3>
+                    <p>百度搜索页面的用户体验提升与视觉优化</p>
+                </a>
+                <!-- 作品项目3 -->
+                <a href="xuexitong-detail.html" class="work-item">
+                    <div class="work-img">
+                        <img src="images/学习通.jpg" alt="学习通项目" class="work-image">
+                    </div>
+                    <h3>"学习通应用设计"页重构</h3>
+                    <p>在线教育平台的交互设计与功能优化方案</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>联系我</h2>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" placeholder="请输入您的姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" placeholder="请输入您的邮箱">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言</label>
+                        <textarea id="message" rows="5" placeholder="请输入您的留言"></textarea>
+                    </div>
+                    <button type="submit" class="btn">发送</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <p>联系人：何先生</p>
+                <p>邮箱：565087811@qq.com</p>
+                <p>电话：134-2245-6589</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 个人作品集. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
